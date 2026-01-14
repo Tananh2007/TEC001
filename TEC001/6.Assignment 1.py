@@ -1,0 +1,7 @@
+talents = float(input("Enter talents: "))
+pounds = float(input("Enter pounds: "))
+lots = float(input("Enter lots: "))
+total =(talents * 20 * 32 * 13.3 + pounds * 32 * 13.3 + lots * 13.3)
+kilograms = int(total/1000)
+grams = int(round(total%1000))
+print(f"The_weight_in_modern_units: {kilograms} kilograms and {grams} grams" )
