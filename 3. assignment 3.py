@@ -1,14 +1,16 @@
-sex = input(" Enter your sex (M/F): ")
-hemoglobin_value = float(input(" Enter your hemoglobin value(g/l): "))
-if sex == "M" and hemoglobin_value <= 167 and hemoglobin_value >= 134:
-    print("you have a normal hemoglobin for adult males")
-elif sex == "M" and hemoglobin_value <= 134:
-    print(" your hemolobin value is low " )
-elif sex == "M" and hemoglobin_value >= 167:
-    print(" your hemoglobin value is high " )
-elif sex == "F" and hemoglobin_value >= 117 and hemoglobin_value <= 155:
-    print(" you have a normal hemoglobin for adult females ")
-elif sex == "F" and hemoglobin_value >= 155:
-    print(" your hemoglobin value is high ")
-elif sex == "F" and hemoglobin_value <= 117:
-    print(" your hemoglobin value is low ")
+largest_number = None
+lowest_number = None
+while True:
+    number = input("Enter a number: ")
+    if number == "":
+        break
+    number = float(number)
+    if lowest_number is None or number < lowest_number:
+        lowest_number = number
+    if largest_number is None or number > largest_number:
+        largest_number = number
+if lowest_number is not None:
+    print("largest number:", largest_number)
+    print("lowest number:", lowest_number)
+else:
+    print("pls enter a number.")
