@@ -1,7 +1,13 @@
-year = int(input("enter your year: "))
-if year % 4 == 0:
-    print("That year is a leap year.")
-elif year % 400 == 0:
-    print("That year is a leap year.")
+number = int(input("Enter an integer: "))
+if number < 2:
+    print(number, "is not a prime number.")
 else:
-    print("That year is not a leap year.")
+    is_prime = True
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
+            is_prime = False
+            break
+    if is_prime:
+        print(number, "is a prime number.")
+    else:
+        print(number, "is not a prime number.")
